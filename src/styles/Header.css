@@ -1,9 +1,7 @@
 .header {
-  color: var(--gray-50);
   height: 12vh;
   padding: 0 2rem;
-  box-shadow: rgba(110, 231, 183, 0.1) 0px 4px 6px -1px,
-    rgba(110, 231, 183, 0.06) 0px 2px 4px -1px;
+  background-color: var(--gray-1000);
 }
 
 .logo {
@@ -26,4 +24,10 @@
 .header > a:hover {
   cursor: pointer;
   box-shadow: rgba(54, 211, 153, 0.35) 0px 5px 15px;
+}
+
+@media (min-width: 600px) {
+  .header {
+    padding: 0 3rem;
+  }
 }
