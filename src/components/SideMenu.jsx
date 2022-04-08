@@ -9,7 +9,7 @@ import '../styles/SideMenu.css'
 const SideMenu = () => {
   return (
     <nav className="sideMenu">
-      <NavLink to="#">
+      <NavLink to="/">
         <AiOutlineHome />
         <span>Home</span>
       </NavLink>

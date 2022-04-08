@@ -1,6 +1,6 @@
 .sideMenu {
   background-color: var(--gray-1000);
-  height: 5vh;
+  height: 6vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -8,9 +8,10 @@
 }
 
 .sideMenu > a {
-  color: gray;
-  font-size: 1.2rem;
-  font-family: 'Rubik Moonrocks', cursive;
+  color: var(--gray-50);
+  font-size: 1.4rem;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: .1em;
 }
 
 .sideMenu > a:hover {
@@ -22,7 +23,7 @@
 }
 
 .sideMenu > a > svg {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
@@ -35,7 +36,8 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
+    border-right: 1px solid lightgray;
   }
 
   .sideMenu > a {
@@ -48,7 +50,8 @@
   }
 
   .sideMenu > a:hover {
-    background-color: var(--teal-50);
+    /* background-color: var(--teal-50); */
+    font-weight: 700;
     color: var(--teal-600);
   }
 

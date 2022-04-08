@@ -1,0 +1,28 @@
+.home {
+  font-family: 'Bebas Neue', cursive;
+  width: 100%;
+}
+
+.categories-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid lightgray;
+}
+
+.categories-container > span {
+  background-color: var(--gray-900);
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  padding: 0.2rem 0.635rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--gray-50);
+}
+
+.categories-container > span:hover {
+  cursor: pointer;
+  background-color: var(--gray-1000);
+  color: var(--teal-600);
+}

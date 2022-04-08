@@ -2,6 +2,7 @@
   height: 12vh;
   padding: 0 2rem;
   background-color: var(--gray-1000);
+  border-bottom: 1px solid lightgray;
 }
 
 .logo {

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root {
-  --background-primary: #111827;
-  --gary-50: #f9fafb;
+  --gray-50: #f9fafb;
   --gray-900: #0f172a;
   --gray-1000: #040f2a;
   --zinc-300: #d4d4d8;
@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  background-color: var(--background-primary);
+  background-color: var(--gray-1000);
 }
 
 a {
