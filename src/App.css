@@ -1,0 +1,15 @@
+.app {
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 600px) {
+  .main-container {
+    flex-direction: row;
+    height: 88vh;
+  }
+}

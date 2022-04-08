@@ -1,0 +1,63 @@
+.sideMenu {
+  background-color: var(--gray-1000);
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sideMenu > a {
+  color: gray;
+  font-size: 1.2rem;
+  font-family: 'Rubik Moonrocks', cursive;
+}
+
+.sideMenu > a:hover {
+  color: var(--teal-600);
+}
+
+.sideMenu > a > span {
+  display: none;
+}
+
+.sideMenu > a > svg {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 600px) {
+  .sideMenu {
+    height: 100%;
+    width: 18vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .sideMenu > a {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5em;
+  }
+
+  .sideMenu > a:hover {
+    background-color: var(--teal-50);
+    color: var(--teal-600);
+  }
+
+  .sideMenu > a > span {
+    display: block;
+  }
+
+  .sideMenu > a > svg {
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+}
