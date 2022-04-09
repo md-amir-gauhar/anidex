@@ -1,4 +1,5 @@
 import React from 'react'
+import VideoCard from '../components/VideoCard'
 import { useData } from '../context/DataContext'
 
 import '../styles/Home.css'
@@ -16,7 +17,9 @@ const Home = () => {
         <span>Anime Opening</span>
       </div>
       <div className='videoCard-container'>
-
+        {videos.map(({ _id, title, createdAt, views, likes, creator }) => (
+          <VideoCard key={_id} title={title} createdAt={createdAt} views={views} likes={likes} creator={creator} />
+        ))}
       </div>
     </div>
   )
