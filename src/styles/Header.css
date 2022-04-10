@@ -7,6 +7,7 @@
   width: 100%;
   top: 0;
   z-index: 99;
+  transition: 0.5s ease-in;
 }
 
 .logo {
@@ -34,5 +35,11 @@
 @media (min-width: 600px) {
   .header {
     padding: 0 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-sticky {
+    display: none;
   }
 }
