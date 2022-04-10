@@ -17,8 +17,8 @@ const Home = () => {
         <span>Anime Opening</span>
       </div>
       <div className='videoCard-container'>
-        {videos.map(({ _id, title, createdAt, views, likes, creator }) => (
-          <VideoCard key={_id} title={title} createdAt={createdAt} views={views} likes={likes} creator={creator} />
+        {videos.map(({ _id, title, createdAt, views, likes, creator, creatorImg }) => (
+          <VideoCard key={_id} _id={_id} title={title} createdAt={createdAt} views={views} likes={likes} creator={creator} creatorImg={creatorImg} />
         ))}
       </div>
     </div>

@@ -3,23 +3,24 @@ import { Link } from 'react-router-dom'
 import { BsFillPlayFill } from 'react-icons/bs'
 import '../styles/VideoCard.css'
 
-const VideoCard = ({ _id, title, createdAt, views, likes, creator }) => {
+const VideoCard = ({ _id, title, createdAt, views, likes, creator, creatorImg }) => {
   return (
     <div className='videoCard'>
-      <Link to="#">
-        <img
-          src={`https://i.ytimg.com/vi/${_id}/0.jpg`}
-          alt="thumbnail"
-        />
-        <BsFillPlayFill />
-        <div className="videoCard-details">
-          <h1>{title}</h1>
+      <img
+        src={`https://i.ytimg.com/vi/${_id}/maxresdefault.jpg`}
+        alt="thumbnail"
+      />
+      <BsFillPlayFill className='play-icon' />
+      <div className="videoCard-details">
+        <img src={creatorImg} alt="logo" className='creator-img' />
+        <div className='details-container'>
+          <span className="title">{title}</span>
           <div>
             <span>{creator}-{views} views</span>
             <span>{createdAt}</span>
           </div>
         </div>
-      </Link>
+      </div>
     </div>
   )
 }

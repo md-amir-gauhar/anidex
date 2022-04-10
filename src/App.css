@@ -3,6 +3,7 @@
 }
 
 .main-container {
+  margin-top: 12vh;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -11,5 +12,6 @@
   .main-container {
     flex-direction: row;
     height: 88vh;
+    margin-top: 12vh;
   }
 }
