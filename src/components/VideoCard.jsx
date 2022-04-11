@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { BsFillPlayFill } from 'react-icons/bs'
 import '../styles/VideoCard.css'
 

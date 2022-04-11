@@ -5,8 +5,7 @@
   width: 90%;
   padding: 1rem;
   position: relative;
-  min-height: 300px;
-  transition: all .2ms ease-in-out;
+  transition: all 0.2ms ease-in-out;
 }
 
 .videoCard:hover {
@@ -15,7 +14,8 @@
 }
 
 .videoCard > img {
-  /* object-fit: contain; */
+  object-fit: contain;
+  height: 220px;
   border-radius: 1.5rem;
 }
 
@@ -23,7 +23,7 @@
   position: absolute;
   color: var(--gray-50);
   font-size: 5rem;
-  top: 25%;
+  top: 27%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -36,9 +36,10 @@
 }
 
 .creator-img {
-  height: 3.5rem;
+  height: 3rem;
   border-radius: 50%;
   object-fit: contain;
+  align-self: flex-start;
 }
 
 .details-container {
@@ -64,5 +65,9 @@
 @media (min-width: 600px) {
   .videoCard {
     width: 370px;
+  }
+
+  .videoCard > img {
+    height: 200px;
   }
 }
