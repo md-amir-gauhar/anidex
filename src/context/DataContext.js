@@ -29,7 +29,9 @@ const DataProvider = ({ children }) => {
 
   const value = {
     videos: state.videos,
-    categories: state.categories
+    categories: state.categories,
+    sortByCategory: state.sortByCategory,
+    dispatch
   }
   return (
     <DataContext.Provider value={value}>

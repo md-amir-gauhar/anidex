@@ -185,16 +185,6 @@ export const videos = [
     category: "Anime Trailer"
   },
   {
-    _id: "oJwMiU3RJmA",
-    title: "Naruto Shippuden OP / Opening 3",
-    createdAt: "10 Jun 2020",
-    views: "10,184,909",
-    likes: "181k",
-    creator: "SensenWorld",
-    creatorImg: "https://yt3.ggpht.com/ytc/AKedOLQVWtlmTTxY50ubOwCkLvynzpKWFJMkfokoC8v_kg=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Opening"
-  },
-  {
     _id: "dwv65QSdXSU",
     title: "Jujutsu Kaisen「AMV」- beggin",
     createdAt: "18 Mar 2021",

@@ -11,9 +11,9 @@
   border-bottom: 1px solid lightgray;
 }
 
-.categories-container > span {
+.categories-container > .category {
   background-color: var(--gray-900);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border-radius: 2rem;
   padding: 0.2rem 0.635rem;
   font-weight: 400;
@@ -21,10 +21,16 @@
   color: var(--gray-50);
 }
 
-.categories-container > span:hover {
+.categories-container > .category:hover {
   cursor: pointer;
-  background-color: var(--gray-1000);
+  background-color: var(--gray-50);
   color: var(--teal-600);
+}
+
+.categories-container > .category.is-active {
+  background-color: var(--gray-50);
+  color: var(--teal-600);
+  font-weight: 700;
 }
 
 .videoCard-container {
@@ -36,8 +42,7 @@
   padding: 1rem;
 }
 
-
-@media (min-width:600px) {
+@media (min-width: 600px) {
   .home {
     margin-left: 18vw;
     width: 100%;

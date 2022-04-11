@@ -5,7 +5,6 @@ import '../styles/Header.css'
 
 const Header = () => {
   const scrollingUp = useScrollingUp()
-  console.log(scrollingUp)
   return (
     <header className={`header flex align-center justify-between ${scrollingUp && 'header-sticky'}`}>
       <div className="logo">

@@ -1,6 +1,7 @@
 const initialState = {
   videos: [],
-  categories: []
+  categories: [],
+  sortByCategory: ""
 }
 
 const reducer = (state, { type, payload }) => {
@@ -14,6 +15,11 @@ const reducer = (state, { type, payload }) => {
       return {
         ...state,
         categories: payload
+      }
+    case "SORT_BY_CATEGORY":
+      return {
+        ...state,
+        sortByCategory: payload
       }
     default:
       return state
