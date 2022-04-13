@@ -11,23 +11,23 @@ const SideMenu = () => {
     <nav className="sideMenu">
       <NavLink to="/">
         <AiOutlineHome />
-        <span>Home</span>
+        {/* <span>Home</span> */}
       </NavLink>
       <NavLink to="#">
         <AiOutlineHistory />
-        <span>History</span>
+        {/* <span>History</span> */}
       </NavLink>
       <NavLink to="#">
         <AiOutlineLike />
-        <span>Liked Videos</span>
+        {/* <span>Liked Videos</span> */}
       </NavLink>
       <NavLink to="#">
         <AiOutlineFieldTime />
-        <span>Watch Later</span>
+        {/* <span>Watch Later</span> */}
       </NavLink>
       <NavLink to="#">
         <MdPlaylistPlay />
-        <span>Playlist</span>
+        {/* <span>Playlist</span> */}
       </NavLink>
     </nav>
   )

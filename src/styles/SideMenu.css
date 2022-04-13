@@ -31,14 +31,14 @@
   .sideMenu {
     position: fixed;
     height: 100%;
-    width: 18vw;
+    width: 7vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem 0.5rem;
-    border-right: 1px solid lightgray;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    border-right: 1px solid var(--teal-400);
   }
 
   .sideMenu > a {
@@ -51,17 +51,17 @@
   }
 
   .sideMenu > a:hover {
-    /* background-color: var(--teal-50); */
-    font-weight: 700;
+    background-color: var(--teal-50);
+    font-weight: 000;
     color: var(--teal-600);
   }
 
-  .sideMenu > a > span {
+  /* .sideMenu > a > span {
     display: block;
-  }
+  } */
 
   .sideMenu > a > svg {
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 700;
   }
 }

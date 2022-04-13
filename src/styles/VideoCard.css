@@ -64,7 +64,7 @@
 
 @media (min-width: 600px) {
   .videoCard {
-    width: 370px;
+    width: 400px;
   }
 
   .videoCard > img {

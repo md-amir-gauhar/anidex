@@ -8,17 +8,18 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid var(--teal-400);
 }
 
 .categories-container > .category {
   background-color: var(--gray-900);
   font-size: 1.3rem;
   border-radius: 2rem;
-  padding: 0.2rem 0.635rem;
+  padding: 0.5rem 0.7rem;
   font-weight: 400;
   letter-spacing: 0.1em;
   color: var(--gray-50);
+  border: 1px solid var(--teal-400);
 }
 
 .categories-container > .category:hover {
@@ -38,13 +39,12 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  gap: 1rem;
   padding: 1rem;
 }
 
 @media (min-width: 600px) {
   .home {
-    margin-left: 18vw;
+    margin-left: 7vw;
     width: 100%;
   }
 
