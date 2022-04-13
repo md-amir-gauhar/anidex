@@ -4,12 +4,16 @@ import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
 
+import { DataProvider } from './context/DataContext'
+
 // Call make Server
 makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DataProvider>
+      <App />
+    </DataProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
