@@ -37,10 +37,6 @@ const Home = () => {
             <span key={_id} className={`category ${active && "is-active"}`} onClick={() => clickHandler(categoryName)}>{categoryName}</span>
           ))
         }
-        {/* <span>All</span>
-        <span>AMV</span>
-        <span>Anime Trailer</span>
-        <span>Anime Opening</span> */}
       </div>
       <div className='videoCard-container'>
         {filteredVideos.map(({ _id, title, createdAt, views, likes, creator, creatorImg }) => (
