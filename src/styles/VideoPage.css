@@ -1,0 +1,77 @@
+.videoPage {
+  display: flex;
+  gap: 1rem;
+  padding: 2.5rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.video-container {
+  width: 95%;
+  height: 70vh;
+  margin: 0 auto;
+}
+
+.video-container-footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.video-title {
+  font-size: 2rem;
+  color: var(--gray-50);
+}
+
+.likes,
+.date {
+  color: var(--gray-400);
+  margin: 0 0.5rem 0 0;
+  font-size: 1.3rem;
+}
+
+.video-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+}
+
+.video-actions > div {
+  padding: 0.2rem 0.5rem;
+  flex-direction: column;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+
+.video-actions > div:hover {
+  background-color: var(--gray-50);
+  color: #000;
+}
+
+.video-details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--gray-50);
+}
+
+@media (min-width: 800px) {
+  .videoPage {
+    flex-direction: column;
+    margin-left: 7vw;
+  }
+
+  .video-container {
+    height: 100%;
+    width: 70%;
+    margin: 0;
+  }
+
+  .video-actions > div {
+    border: 1px solid var(--gray-50);
+    flex-direction: row;
+  }
+}
