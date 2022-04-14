@@ -14,11 +14,16 @@ It also uses **Mockbee** which handles all the backend related stuffs such as us
 
 
 ## Features
-- Authentication 
+- Responsive
+- Authentication
+  - Login
+  - Signup
 - Add to liked videos
+- Individual video page
 - Add to watchlist
 - Add to playlist
 - Create a new playlist
+- Watch History
 - Filter the videos based on your types
   - AMVs
   - Anime Opening themes
