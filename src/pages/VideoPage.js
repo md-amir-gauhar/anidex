@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player/youtube'
 import { useData } from '../context/DataContext'
@@ -8,15 +9,21 @@ import { MdAccessTime, MdPlaylistAdd } from 'react-icons/md'
 import '../styles/VideoPage.css'
 
 const VideoPage = () => {
+  const navigate = useNavigate()
   const { id } = useParams()
   const { videos } = useData()
   const [video, setVideo] = useState({})
+
   const vid = videos && videos.find(vid => vid._id === id)
 
   useEffect(() => {
     setVideo({ ...vid })
-  })
-  // const video = videos.find(vid => vid._id === id)
+  }, [vid])
+
+
+  const onClickHandler = (_id) => {
+    navigate(`/video/${_id}`)
+  }
 
   return video ? (
     <div className='videoPage'>
@@ -57,6 +64,25 @@ const VideoPage = () => {
               <span>{video.subscriber} <span>Subscriber</span></span>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="more-videos">
+        <span>More Videos</span>
+        <div className="more-videos-container">
+          {
+            videos?.slice(0, 7).map(item => (
+              <div key={item._id} className="more-video" onClick={() => onClickHandler(item._id)}>
+                <img
+                  src={`https://i.ytimg.com/vi/${item._id}/maxresdefault.jpg`}
+                  alt="thumbnail"
+                />
+                <div>
+                  <span>{item.title}</span>
+                  <span>{item.creator}</span>
+                </div>
+              </div>
+            ))
+          }
         </div>
       </div>
     </div>

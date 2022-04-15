@@ -50,6 +50,17 @@ export const videos = [
   },
   {
     _id: "jHaBC7Ulkow",
+    title: "Tokyo Revengers - Opening Theme [English Sub]",
+    createdAt: "27 Dec 2015",
+    views: "8,478,157",
+    likes: "155k",
+    creator: "Muse Asia",
+    creatorImg: "https://yt3.ggpht.com/xdgNgosFHeVJ8BNdypwReOje1Luer4O521yV1-k5lVWRuRdmHzq9kLsNz9eVLRBCewW56fP9CQ=s88-c-k-c0x00ffffff-no-rj",
+    category: "Anime Opening",
+    subscriber: "200k"
+  },
+  {
+    _id: "iutQJzAXiWo",
     title: "BLEACH: Thousand Year Blood War – Official Trailer",
     createdAt: "18 Aug 2021",
     views: "1,007,602",
@@ -61,12 +72,12 @@ export const videos = [
   },
   {
     _id: "AgBUP8TJqV8",
-    title: "Tokyo Revengers - Opening Theme [English Sub]",
+    title: "Shingeki No Kyojin Opening 1",
     createdAt: "27 Dec 2015",
-    views: "8,478,157",
+    views: "8,500,125",
     likes: "155k",
-    creator: "Muse Asia",
-    creatorImg: "https://yt3.ggpht.com/xdgNgosFHeVJ8BNdypwReOje1Luer4O521yV1-k5lVWRuRdmHzq9kLsNz9eVLRBCewW56fP9CQ=s88-c-k-c0x00ffffff-no-rj",
+    creator: "Kimmeh",
+    creatorImg: "https://yt3.ggpht.com/ytc/AKedOLQSJ6MTKxjI38xQs6_1XGi3A3RvdN7GnnUkPHmJPQ=s88-c-k-c0x00ffffff-no-rj",
     category: "Anime Opening",
     subscriber: "200k"
   },
