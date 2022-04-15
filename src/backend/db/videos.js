@@ -12,7 +12,8 @@ export const videos = [
     likes: "269kk",
     creator: "More Than AMV",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRNJFeB6n6aybIux9vhIo-RaNaPHkvKnkMe-GKrTg=s88-c-k-c0x00ffffff-no-rj",
-    category: "AMV"
+    category: "AMV",
+    subscriber: "200k"
   },
   {
     _id: "xylh_sJAYdc",
@@ -22,7 +23,8 @@ export const videos = [
     likes: "45k",
     creator: "SRA Music Videos",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLS-PPxyhkwbr95kI3EOGfGDhaLVS1K2yjFzGnAg=s88-c-k-c0x00ffffff-no-rj",
-    category: "AMV"
+    category: "AMV",
+    subscriber: "200k"
   },
   {
     _id: "ZWXuGxQ5G_0",
@@ -32,7 +34,8 @@ export const videos = [
     likes: "20k",
     creator: "Muse Asia",
     creatorImg: "https://yt3.ggpht.com/xdgNgosFHeVJ8BNdypwReOje1Luer4O521yV1-k5lVWRuRdmHzq9kLsNz9eVLRBCewW56fP9CQ=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Trailer"
+    category: "Anime Trailer",
+    subscriber: "200k"
   },
   {
     _id: "Z6wP5eMNykE",
@@ -42,7 +45,8 @@ export const videos = [
     likes: "89k",
     creator: "Tributer Craft",
     creatorImg: "https://yt3.ggpht.com/ZdQI_KNU6hailRhhYFjBgnWDiOf5yL4p2EAKQGo4wgVF3CgwpexbwIr29QoiMitz5dXyTQ6LoQ=s88-c-k-c0x00ffffff-no-rj",
-    category: "AMV"
+    category: "AMV",
+    subscriber: "200k"
   },
   {
     _id: "jHaBC7Ulkow",
@@ -52,7 +56,8 @@ export const videos = [
     likes: "30k",
     creator: "JP Anime",
     creatorImg: "https://yt3.ggpht.com/ZCszwNVr6Nov8Ylcni-sMj9nWiHVWC-01NRlp9zPWfjrZ77p3iCaLgEmNxEe8668y17VK_h0JsU=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Trailer"
+    category: "Anime Trailer",
+    subscriber: "200k"
   },
   {
     _id: "AgBUP8TJqV8",
@@ -62,7 +67,8 @@ export const videos = [
     likes: "155k",
     creator: "Muse Asia",
     creatorImg: "https://yt3.ggpht.com/xdgNgosFHeVJ8BNdypwReOje1Luer4O521yV1-k5lVWRuRdmHzq9kLsNz9eVLRBCewW56fP9CQ=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Opening"
+    category: "Anime Opening",
+    subscriber: "200k"
   },
   {
     _id: "BkaH3h7NCx4",
@@ -72,7 +78,8 @@ export const videos = [
     likes: "125k",
     creator: "Anirun",
     creatorImg: "https://yt3.ggpht.com/HJFiMWYiq1H5yExW1XRP1HlIcguqwy2_ZVD_a_iRSdNRobrt2UsNWEDcV1s6Ne4ZrC2a20eE=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Opening"
+    category: "Anime Opening",
+    subscriber: "200k"
   },
   {
     _id: "oJwMiU3RJmA",
@@ -82,7 +89,8 @@ export const videos = [
     likes: "181k",
     creator: "SensenWorld",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLQVWtlmTTxY50ubOwCkLvynzpKWFJMkfokoC8v_kg=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Opening"
+    category: "Anime Opening",
+    subscriber: "200k"
   },
   {
     _id: "S1uu7NWvu6k",
@@ -92,7 +100,8 @@ export const videos = [
     likes: "42k",
     creator: "Dragon Ball Music Archive",
     creatorImg: "https://yt3.ggpht.com/7dEhAFZf-de8MiMG1ybcAoSTfAqhAh8_thdK22G3njruUH4GxZJQ_0jk9mAfJj6qTmAonDyM64o=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Opening"
+    category: "Anime Opening",
+    subscriber: "200k"
   },
   {
     _id: "6hp27JeCf4c",
@@ -102,7 +111,8 @@ export const videos = [
     likes: "21k",
     creator: "Ikuzo Network",
     creatorImg: "https://yt3.ggpht.com/qBFYIHs3KMdD2ZEc9eItZpBynqV01zr3i-CN_RWXjjRMx4EKK4kMhSWwEROM0Cz939fgIc9zpg=s88-c-k-c0x00ffffff-no-rj",
-    category: "AMV"
+    category: "AMV",
+    subscriber: "200k"
   },
   {
     _id: "7RUylQDHQMk",
@@ -112,7 +122,8 @@ export const videos = [
     likes: "511k",
     creator: "King AMV",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSEafFkbBFiWincFBx95ftecHVxTlmMX11yKXaakw=s88-c-k-c0x00ffffff-no-rj",
-    category: "AMV"
+    category: "AMV",
+    subscriber: "200k"
   },
   {
     _id: "DPJjrArxwgc",
@@ -122,7 +133,8 @@ export const videos = [
     likes: "8.1k",
     creator: "ChivalricPig",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRNoY63ZqFeh_TWeMFoOxIVFKE_dDbkVnanyBEj=s88-c-k-c0x00ffffff-no-rj",
-    category: "AMV"
+    category: "AMV",
+    subscriber: "200k"
   },
   {
     _id: "XjvaJH8aRc0",
@@ -132,7 +144,8 @@ export const videos = [
     likes: "178k",
     creator: "Anime OST",
     creatorImg: "https://yt3.ggpht.com/WXBe_uXHuD4IFIiUuEOu4mPqy7LUvgIbWDeMvD4mxPPW97gVSlCW2hnwFxub6Dj1RKyID-_v_w=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Opening"
+    category: "Anime Opening",
+    subscriber: "200k"
   },
   {
     _id: "7aMOurgDB-o",
@@ -142,7 +155,8 @@ export const videos = [
     likes: "871k",
     creator: "Crunchyroll Dubs",
     creatorImg: "https://yt3.ggpht.com/-gXbJ-meZMyTkJA5A1WQa1PKEF8G-cLL0cTz02IlE13MfCtKg2xctLv_ZuId_ICjT3m0U_qW3A=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Opening"
+    category: "Anime Opening",
+    subscriber: "200k"
   },
   {
     _id: "WAoPeG1LU1g",
@@ -152,7 +166,8 @@ export const videos = [
     likes: "761k",
     creator: "Cytharia",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSS0uNqYevvNpmAIG8e7Z7cDv3xJjN5W0md5rmgfw=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Opening"
+    category: "Anime Opening",
+    subscriber: "200k"
   },
   {
     _id: "eHZNKqdxJKo",
@@ -162,7 +177,8 @@ export const videos = [
     likes: "182",
     creator: "Gol D Roger",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSJKfdP2pVTnH0KfWkfRbUQV_CZ0YpeAxNQoXPd=s88-c-k-c0x00ffffff-no-rj",
-    category: "AMV"
+    category: "AMV",
+    subscriber: "200k"
   },
   {
     _id: "WGMc7SxIZfU",
@@ -172,7 +188,8 @@ export const videos = [
     likes: "180k",
     creator: "NekoAMVs",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSC7SNY7VEWAkRqSZjc9o4_F_yJHhfguNXs6fM5=s88-c-k-c0x00ffffff-no-rj",
-    category: "AMV"
+    category: "AMV",
+    subscriber: "200k"
   },
   {
     _id: "fR5_orbIkTc",
@@ -182,7 +199,8 @@ export const videos = [
     likes: "931",
     creator: "Madman Anime",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLSPEPJy_pwy2hYmyyrxk4flGAqOfoCfnz_z9viZZg=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Trailer"
+    category: "Anime Trailer",
+    subscriber: "200k"
   },
   {
     _id: "dwv65QSdXSU",
@@ -192,7 +210,8 @@ export const videos = [
     likes: "352k",
     creator: "genkayedits悪い",
     creatorImg: "https://yt3.ggpht.com/ytc/AKedOLRQnUa-dmn_YOlo0k1SvJA7aDiIrn2-3BFbJPuejA=s88-c-k-c0x00ffffff-no-rj",
-    category: "AMV"
+    category: "AMV",
+    subscriber: "200k"
   },
   {
     _id: "FHgm89hKpXU",
@@ -202,6 +221,7 @@ export const videos = [
     likes: "283k",
     creator: "IGN",
     creatorImg: "https://yt3.ggpht.com/H_---ano_f27DOCejDhUdBMtBcxcv32MoXmFKQc_mBcxYSH4HPZTGuBUdm7UgI5VlutMOVX2=s88-c-k-c0x00ffffff-no-rj",
-    category: "Anime Trailer"
+    category: "Anime Trailer",
+    subscriber: "200k"
   },
 ];

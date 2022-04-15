@@ -1,20 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player/youtube'
 import { useData } from '../context/DataContext'
-import { AiFillLike } from 'react-icons/ai'
-import { MdAccessTimeFilled, MdPlaylistAdd } from 'react-icons/md'
+import { AiOutlineLike } from 'react-icons/ai'
+import { MdAccessTime, MdPlaylistAdd } from 'react-icons/md'
 
 import '../styles/VideoPage.css'
 
 const VideoPage = () => {
   const { id } = useParams()
   const { videos } = useData()
+  const [video, setVideo] = useState({})
+  const vid = videos && videos.find(vid => vid._id === id)
 
-  const video = videos.find(vid => vid._id === id)
+  useEffect(() => {
+    setVideo({ ...vid })
+  })
+  // const video = videos.find(vid => vid._id === id)
 
-  console.log(video);
-  return (
+  return video ? (
     <div className='videoPage'>
       <div className="video-container">
         <ReactPlayer
@@ -33,11 +37,11 @@ const VideoPage = () => {
             </div>
             <div className='video-actions'>
               <div className='flex align-center'>
-                <AiFillLike />
+                <AiOutlineLike />
                 <span>{video.likes}</span>
               </div>
               <div className='flex align-center'>
-                <MdAccessTimeFilled />
+                <MdAccessTime />
                 <span>Watch Later</span>
               </div>
               <div className='flex align-center'>
@@ -46,10 +50,17 @@ const VideoPage = () => {
               </div>
             </div>
           </div>
+          <div className="creator-container">
+            <img src={video.creatorImg} alt="creator-logo" className='creator-img' />
+            <div>
+              <span>{video.creator}</span>
+              <span>{video.subscriber} <span>Subscriber</span></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
+  ) : <></>
 }
 
 export default VideoPage

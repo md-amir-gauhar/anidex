@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className={`header flex align-center justify-between ${scrollingUp && 'header-sticky'}`}>
       <div className="logo">
-        <img src="./logo.png" alt="logo" />
+        <img src="/logo.png" alt="logo" />
       </div>
       <Link to='#'>Login</Link>
     </header>
