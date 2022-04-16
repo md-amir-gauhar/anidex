@@ -13,7 +13,7 @@ const DataProvider = ({ children }) => {
         const { data: videos } = await axios.get('/api/videos')
         dispatch({
           type: "INITIAL_VIDEOS",
-          payload: videos.videos
+          payload: [...videos.videos]
         })
 
         const { data: categories } = await axios.get('/api/categories')

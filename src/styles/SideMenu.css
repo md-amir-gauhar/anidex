@@ -51,14 +51,10 @@
   }
 
   .sideMenu > a:hover {
-    background-color: var(--teal-50);
+    background-color: var(--gray-50);
     font-weight: 000;
     color: var(--teal-600);
   }
-
-  /* .sideMenu > a > span {
-    display: block;
-  } */
 
   .sideMenu > a > svg {
     font-size: 2rem;

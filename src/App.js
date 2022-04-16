@@ -5,6 +5,7 @@ import SideMenu from './components/SideMenu';
 import Home from './pages/Home'
 
 import './App.css'
+import VideoPage from './pages/VideoPage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <SideMenu />
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/video/:id' element={<VideoPage />} />
           </Routes>
         </div>
       </div>

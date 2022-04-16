@@ -1,10 +1,16 @@
 import React from 'react'
 import { BsFillPlayFill } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom'
 import '../styles/VideoCard.css'
 
 const VideoCard = ({ _id, title, createdAt, views, likes, creator, creatorImg }) => {
+  const navigate = useNavigate()
+  const onClickHandler = () => {
+    navigate(`/video/${_id}`)
+  }
+
   return (
-    <div className='videoCard'>
+    <div className='videoCard' onClick={onClickHandler}>
       <img
         src={`https://i.ytimg.com/vi/${_id}/maxresdefault.jpg`}
         alt="thumbnail"
