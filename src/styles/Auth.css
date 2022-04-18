@@ -38,16 +38,23 @@
 }
 
 input[type='email'],
-input[type='password'] {
+input[type='password'],
+input[type='text'] {
   background-color: transparent;
   border: 1px solid var(--teal-600);
+  outline: none;
   font-size: 1.2rem;
   padding: 0.7rem;
   color: var(--teal-600);
 }
 
+::placeholder {
+  color: var(--gray-50);
+}
+
 .email,
-.password {
+.password,
+.username {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -63,7 +70,8 @@ input[type='password'] {
   width: 90%;
 }
 
-.buttons-container > button {
+.buttons-container > button,
+.register-button {
   width: 100%;
   padding: 0.5rem;
   font-size: 1.2rem;
@@ -73,10 +81,6 @@ input[type='password'] {
   border: none;
   transition: transform all 0.5s ease-in-out;
   cursor: pointer;
-}
-
-.buttons-container > button:hover {
-  transform: scale(0.95);
 }
 
 .or {
@@ -98,8 +102,13 @@ input[type='password'] {
   color: var(--gray-50);
 }
 
+.register-button {
+  background-color: var(--teal-400);
+  color: var(--gray-50);
+}
+
 .buttons-container > button:first-child:hover {
-  border: 1px solid var(--teal-400);
+  border: 0.1px solid var(--teal-400);
   background-color: transparent;
   color: var(--teal-400);
 }
