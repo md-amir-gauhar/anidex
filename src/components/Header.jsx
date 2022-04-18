@@ -7,10 +7,10 @@ const Header = () => {
   const scrollingUp = useScrollingUp()
   return (
     <header className={`header flex align-center justify-between ${scrollingUp && 'header-sticky'}`}>
-      <div className="logo">
+      <Link to="/" className="logo">
         <img src="/logo.png" alt="logo" />
-      </div>
-      <Link to='#'>Login</Link>
+      </Link>
+      <Link to='/login'>Login</Link>
     </header>
   )
 }
