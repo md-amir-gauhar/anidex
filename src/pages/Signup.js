@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react'
 import axios from 'axios'
-import { Navigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { Navigate, Link } from 'react-router-dom'
+
 import { setAuthData } from '../utils/authUtil'
 import { userAlreadyExists, passwordDidNotMatch } from '../utils/toast'
 import { useAuth } from '../context/AuthContext'
