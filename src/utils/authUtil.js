@@ -6,5 +6,9 @@ const getAuthData = () => {
   return localStorage.getItem('auth')
 }
 
+const removeAuthData = () => {
+  localStorage.removeItem('auth')
+}
 
-export {getAuthData, setAuthData}
+
+export { getAuthData, setAuthData, removeAuthData }

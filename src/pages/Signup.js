@@ -21,17 +21,14 @@ const Signup = () => {
   })
 
   const sendReq = async (data) => {
-    console.log(data)
     try {
       const res = await axios.post('/api/auth/signup', data)
-      console.log(res)
       setAuthData(res.data.encodedToken)
       return res
     } catch (err) {
       if (err.response.status === 422) {
         userAlreadyExists()
       }
-      console.log(err.message)
     }
   }
 
@@ -43,7 +40,6 @@ const Signup = () => {
         email,
         password
       }).then(res => {
-        console.log(res)
         dispatch({
           type: "SIGNED_UP",
           payload: res === undefined ? false : true
