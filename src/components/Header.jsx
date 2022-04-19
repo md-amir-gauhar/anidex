@@ -16,7 +16,7 @@ const Header = () => {
     dispatch({
       type: "LOGGED_OUT"
     })
-    return <Navigate to='/login' />;
+    return <Navigate to="/login" />;
   }
 
   return (

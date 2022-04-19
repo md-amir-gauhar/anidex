@@ -51,6 +51,21 @@ const Login = () => {
     return <Navigate to="/" />
   }
 
+  const testLoginHandler = () => {
+    sendReq({
+      email: "zoro@op.com",
+      password: "onigiri"
+    }).then(res => {
+      dispatch({
+        type: "LOGGED_IN",
+        payload: res === undefined ? null : res
+      })
+      setGoto(res === undefined ? false : true);
+      loggedInSuccessfully()
+    })
+    return <Navigate to="/" />
+  }
+
   if (goto) {
     return <Navigate to='/' />;
   }
@@ -88,7 +103,7 @@ const Login = () => {
               <span>or</span>
               <div></div>
             </div>
-            <button>Login with test credentials</button>
+            <button onClick={testLoginHandler}>Login with test credentials</button>
           </div>
         </form>
 
