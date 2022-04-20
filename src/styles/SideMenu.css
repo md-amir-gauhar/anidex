@@ -2,6 +2,7 @@
   background-color: var(--gray-1000);
   height: 10vh;
   width: 100%;
+  padding: .5rem 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -12,14 +13,24 @@
   font-size: 1.4rem;
   font-family: 'Bebas Neue', cursive;
   letter-spacing: .1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sideMenu > a > span {
+  color: var(--gray-50);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.sideMenu > a:hover > span {
+  color: var(--teal-600);
+  font-weight: 700;
 }
 
 .sideMenu > a:hover {
   color: var(--teal-600);
-}
-
-.sideMenu > a > span {
-  display: none;
 }
 
 .sideMenu > a > svg {
@@ -48,6 +59,9 @@
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .sideMenu > a:hover {
@@ -59,6 +73,10 @@
   .sideMenu > a > svg {
     font-size: 2rem;
     font-weight: 700;
+  }
+
+  .sideMenu > a > span {
+    color: var(--gray-50);
   }
 }
 
