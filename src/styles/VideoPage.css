@@ -48,8 +48,10 @@
   cursor: pointer;
 }
 
-.video-actions > div:hover {
+.video-actions > div:hover,
+.isLiked {
   color: var(--teal-600);
+  font-weight: 700;
 }
 
 .video-details {
@@ -161,9 +163,16 @@
     border: 1px solid var(--gray-50);
     flex-direction: row;
   }
-
   .video-actions > div:hover {
+    font-weight: 700;
     border: 1px solid var(--teal-600);
+  }
+
+  .video-actions >div.isLiked {
+    color: var(--teal-600);
+    font-weight: 700;
+    border: 1px solid var(--teal-600);
+    font-weight: 700;
   }
 
   .more-videos > span {

@@ -1,7 +1,10 @@
 const initialState = {
   videos: [],
   categories: [],
-  sortByCategory: ""
+  sortByCategory: "",
+  liked: [],
+  history: [],
+  watchLater: []
 }
 
 const reducer = (state, { type, payload }) => {
@@ -20,6 +23,11 @@ const reducer = (state, { type, payload }) => {
       return {
         ...state,
         sortByCategory: payload
+      }
+    case "LIKED_VIDEOS":
+      return {
+        ...state,
+        liked: payload
       }
     default:
       return state

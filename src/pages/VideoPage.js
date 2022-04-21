@@ -1,18 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player/youtube'
 import { useData } from '../context/DataContext'
+import { useAuth } from '../context/AuthContext'
+import { Common } from '../utils/Common'
 import { AiOutlineLike } from 'react-icons/ai'
 import { MdAccessTime, MdPlaylistAdd } from 'react-icons/md'
+import { errorPopup, successPopup, warningPopup } from '../utils/toast'
 
 import '../styles/VideoPage.css'
+import { getAuthData } from '../utils/authUtil'
 
 const VideoPage = () => {
   const navigate = useNavigate()
   const { id } = useParams()
-  const { videos } = useData()
+  const { videos, liked } = useData()
+  const { isUser } = useAuth()
   const [video, setVideo] = useState({})
+  const { isLiked } = Common(id)
 
   const vid = videos && videos.find(vid => vid._id === id)
 
@@ -25,7 +32,45 @@ const VideoPage = () => {
     navigate(`/video/${_id}`)
   }
 
-  return video ? (
+  const likeHandler = async () => {
+    if (!isUser) {
+      errorPopup("You must be logged in")
+      return
+    } else {
+      if (isLiked) {
+        try {
+          await axios.delete(`/api/user/likes/${id}`, {
+            headers: {
+              authorization: getAuthData()
+            }
+          })
+          warningPopup("Removed from liked videos.")
+        } catch (err) {
+          console.log(err.message)
+        }
+      } else {
+        try {
+          await axios.post("/api/user/likes", { video }, {
+            headers: {
+              authorization: getAuthData()
+            }
+          })
+          successPopup("Added to liked videos")
+        } catch (err) {
+          if (err.response.status === 404) {
+            errorPopup('No such user exists!');
+          } else {
+            errorPopup('video already exists in liked videos!');
+          }
+        }
+      }
+    }
+  }
+
+
+  // console.log(isLiked)
+
+  return video && (
     <div className='videoPage'>
       <div className="video-container">
         <ReactPlayer
@@ -43,7 +88,7 @@ const VideoPage = () => {
               <span className="date">{video.createdAt}</span>
             </div>
             <div className='video-actions'>
-              <div className='flex align-center'>
+              <div className={`${isLiked && 'isLiked'} flex align-center `} onClick={likeHandler}>
                 <AiOutlineLike />
                 <span>{video.likes}</span>
               </div>
@@ -86,7 +131,7 @@ const VideoPage = () => {
         </div>
       </div>
     </div>
-  ) : <></>
+  )
 }
 
 export default VideoPage
