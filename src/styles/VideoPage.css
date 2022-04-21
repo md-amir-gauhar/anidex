@@ -49,7 +49,8 @@
 }
 
 .video-actions > div:hover,
-.isLiked {
+.isLiked,
+.isInWatchLater {
   color: var(--teal-600);
   font-weight: 700;
 }
@@ -168,7 +169,8 @@
     border: 1px solid var(--teal-600);
   }
 
-  .video-actions >div.isLiked {
+  .video-actions > div.isLiked,
+  .video-actions > div.isInWatchLater {
     color: var(--teal-600);
     font-weight: 700;
     border: 1px solid var(--teal-600);

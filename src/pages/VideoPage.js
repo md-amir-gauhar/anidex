@@ -19,7 +19,7 @@ const VideoPage = () => {
   const { videos, liked } = useData()
   const { isUser } = useAuth()
   const [video, setVideo] = useState({})
-  const { isLiked } = Common(id)
+  const { isLiked, isInWatchLater } = Common(id)
 
   const vid = videos && videos.find(vid => vid._id === id)
 
@@ -67,8 +67,40 @@ const VideoPage = () => {
     }
   }
 
-
-  // console.log(isLiked)
+  const watchLaterHandler = async () => {
+    if (!isUser) {
+      errorPopup("You must be logged in")
+      return
+    } else {
+      if (isInWatchLater) {
+        try {
+          await axios.delete(`/api/user/watchlater/${id}`, {
+            headers: {
+              authorization: getAuthData()
+            }
+          })
+          warningPopup("Removed from watch later.")
+        } catch (err) {
+          console.log(err.message)
+        }
+      } else {
+        try {
+          await axios.post("/api/user/watchlater", { video }, {
+            headers: {
+              authorization: getAuthData()
+            }
+          })
+          successPopup("Added to watch later")
+        } catch (err) {
+          if (err.response.status === 404) {
+            errorPopup('No such user exists!');
+          } else {
+            errorPopup('video already exists in watch later!');
+          }
+        }
+      }
+    }
+  }
 
   return video && (
     <div className='videoPage'>
@@ -92,7 +124,7 @@ const VideoPage = () => {
                 <AiOutlineLike />
                 <span>{video.likes}</span>
               </div>
-              <div className='flex align-center'>
+              <div className={`${isInWatchLater && 'isInWatchLater'} flex align-center `} onClick={watchLaterHandler}>
                 <MdAccessTime />
                 <span>Watch Later</span>
               </div>

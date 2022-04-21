@@ -29,6 +29,16 @@ const reducer = (state, { type, payload }) => {
         ...state,
         liked: payload
       }
+    case "WATCH_LATER":
+      return {
+        ...state,
+        watchLater: payload,
+      }
+    case "HISTORY":
+      return {
+        ...state,
+        history: payload
+      }
     default:
       return state
   }

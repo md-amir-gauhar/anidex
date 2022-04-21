@@ -21,14 +21,6 @@ const DataProvider = ({ children }) => {
           type: "INITIAL_CATEGORIES",
           payload: categories.categories
         })
-
-        const { data: likes } = await axios.get('/api/user/likes')
-        console.log(likes)
-        dispatch({
-          type: "LIKED_VIDEOS",
-          payload: likes.likes
-        })
-
       } catch (err) {
         console.error(err.message)
       }
@@ -40,6 +32,8 @@ const DataProvider = ({ children }) => {
     categories: state.categories,
     sortByCategory: state.sortByCategory,
     liked: state.liked,
+    watchLater: state.watchLater,
+    history: state.history,
     dispatch
   }
   return (
