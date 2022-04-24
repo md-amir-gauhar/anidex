@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
@@ -16,7 +16,7 @@ import { getAuthData } from '../utils/authUtil'
 const VideoPage = () => {
   const navigate = useNavigate()
   const { id } = useParams()
-  const { videos, liked } = useData()
+  const { videos, dispatch } = useData()
   const { isUser } = useAuth()
   const [video, setVideo] = useState({})
   const { isLiked, isInWatchLater } = Common(id)
@@ -45,6 +45,16 @@ const VideoPage = () => {
             }
           })
           warningPopup("Removed from liked videos.")
+          const res = await axios.get('/api/user/likes', {
+            headers: {
+              authorization: getAuthData()
+            }
+          })
+
+          dispatch({
+            type: "LIKED_VIDEOS",
+            payload: res.data.likes
+          })
         } catch (err) {
           console.log(err.message)
         }
@@ -56,6 +66,17 @@ const VideoPage = () => {
             }
           })
           successPopup("Added to liked videos")
+
+          const res = await axios.get('/api/user/likes', {
+            headers: {
+              authorization: getAuthData()
+            }
+          })
+
+          dispatch({
+            type: "LIKED_VIDEOS",
+            payload: res.data.likes
+          })
         } catch (err) {
           if (err.response.status === 404) {
             errorPopup('No such user exists!');
@@ -66,6 +87,7 @@ const VideoPage = () => {
       }
     }
   }
+
 
   const watchLaterHandler = async () => {
     if (!isUser) {
@@ -80,6 +102,17 @@ const VideoPage = () => {
             }
           })
           warningPopup("Removed from watch later.")
+
+          const res = await axios.get('/api/user/watchlater', {
+            headers: {
+              authorization: getAuthData()
+            }
+          })
+
+          dispatch({
+            type: "WATCH_LATER",
+            payload: res.data.watchlater
+          })
         } catch (err) {
           console.log(err.message)
         }
@@ -91,6 +124,18 @@ const VideoPage = () => {
             }
           })
           successPopup("Added to watch later")
+
+          const res = await axios.get('/api/user/watchlater', {
+            headers: {
+              authorization: getAuthData()
+            }
+          })
+
+          dispatch({
+            type: "WATCH_LATER",
+            payload: res.data.watchlater
+          })
+
         } catch (err) {
           if (err.response.status === 404) {
             errorPopup('No such user exists!');
@@ -120,7 +165,7 @@ const VideoPage = () => {
               <span className="date">{video.createdAt}</span>
             </div>
             <div className='video-actions'>
-              <div className={`${isLiked && 'isLiked'} flex align-center `} onClick={likeHandler}>
+              <div className={` ${isLiked && 'isLiked'} flex align-center `} onClick={likeHandler}>
                 <AiOutlineLike />
                 <span>{video.likes}</span>
               </div>

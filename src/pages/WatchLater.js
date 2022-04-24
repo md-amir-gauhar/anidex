@@ -1,34 +1,12 @@
-import React, { useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
 
 import VideoCard from '../components/VideoCard'
 import { useData } from '../context/DataContext'
-import { getAuthData } from '../utils/authUtil'
 
 import '../styles/WatchLater.css'
 
 const WatchLater = () => {
-  const { watchLater, dispatch } = useData()
-
-
-  useEffect(() => {
-    try {
-      (async () => {
-        const res = await axios.get('/api/user/watchlater', {
-          headers: {
-            authorization: getAuthData()
-          }
-        })
-
-        dispatch({
-          type: "WATCH_LATER",
-          payload: res.data.watchlater
-        })
-      })()
-    } catch (err) {
-      console.log(err.message)
-    }
-  }, [])
+  const { watchLater } = useData()
 
   return (
     <div className='watchLater'>

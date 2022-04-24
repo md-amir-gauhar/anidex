@@ -1,34 +1,12 @@
-import React, { useEffect } from 'react'
-import axios from 'axios'
+import React from 'react'
 
 import VideoCard from '../components/VideoCard'
 import { useData } from '../context/DataContext'
-import { getAuthData } from '../utils/authUtil'
 
 import '../styles/LikedVideos.css'
 
 const Liked = () => {
-  const { liked, dispatch } = useData()
-
-
-  useEffect(() => {
-    try {
-      (async () => {
-        const res = await axios.get('/api/user/likes', {
-          headers: {
-            authorization: getAuthData()
-          }
-        })
-
-        dispatch({
-          type: "LIKED_VIDEOS",
-          payload: res.data.likes
-        })
-      })()
-    } catch (err) {
-      console.log(err.message)
-    }
-  }, [])
+  const { liked } = useData()
 
   return (
     <div className='liked-videos'>
