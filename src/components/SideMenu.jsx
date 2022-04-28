@@ -13,19 +13,19 @@ const SideMenu = () => {
         <AiOutlineHome />
         <span>Home</span>
       </NavLink>
-      <NavLink to="#">
+      <NavLink to="/history">
         <AiOutlineHistory />
         <span>History</span>
       </NavLink>
-      <NavLink to="#">
+      <NavLink to="/liked">
         <AiOutlineLike />
         <span>Liked Videos</span>
       </NavLink>
-      <NavLink to="#">
+      <NavLink to="/watchlater">
         <AiOutlineFieldTime />
         <span>Watch Later</span>
       </NavLink>
-      <NavLink to="#">
+      <NavLink to="/playlist">
         <MdPlaylistPlay />
         <span>Playlist</span>
       </NavLink>
