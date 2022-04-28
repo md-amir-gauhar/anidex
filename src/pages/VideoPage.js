@@ -9,9 +9,9 @@ import { Common } from '../utils/Common'
 import { AiOutlineLike } from 'react-icons/ai'
 import { MdAccessTime, MdPlaylistAdd } from 'react-icons/md'
 import { errorPopup, successPopup, warningPopup } from '../utils/toast'
+import { getAuthData } from '../utils/authUtil'
 
 import '../styles/VideoPage.css'
-import { getAuthData } from '../utils/authUtil'
 
 const VideoPage = () => {
   const navigate = useNavigate()
@@ -27,9 +27,30 @@ const VideoPage = () => {
     setVideo({ ...vid })
   }, [vid])
 
+  const { title, creator } = video
 
   const onClickHandler = (_id) => {
     navigate(`/video/${_id}`)
+
+    const data = {
+      id: _id,
+      title,
+      creator,
+    }
+
+    try {
+      (async () => {
+        const response = await axios.post("/api/user/history", { video: data }, {
+          headers: {
+            authorization: getAuthData()
+          }
+        })
+        console.log(response);
+      })()
+    } catch (err) {
+      console.log(err.message)
+    }
+
   }
 
   const likeHandler = async () => {
