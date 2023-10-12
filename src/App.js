@@ -8,6 +8,10 @@ import Home from './pages/Home'
 import VideoPage from './pages/VideoPage';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import WatchLater from './pages/WatchLater';
+import Liked from './pages/Liked';
+import History from './pages/History';
+import PrivateRoutes from './utils/PrivateRoutes';
 
 import './App.css'
 
@@ -35,6 +39,21 @@ function App() {
             <Route path='/video/:id' element={<VideoPage />} />
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
+            <Route path='/liked' element={
+              <PrivateRoutes>
+                <Liked />
+              </PrivateRoutes>
+            } />
+            <Route path='/watchlater' element={
+              <PrivateRoutes>
+                <WatchLater />
+              </PrivateRoutes>
+            } />
+            <Route path='/history' element={
+              <PrivateRoutes>
+                <History />
+              </PrivateRoutes>
+            } />
           </Routes>
         </div>
       </div>

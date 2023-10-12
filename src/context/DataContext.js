@@ -31,6 +31,9 @@ const DataProvider = ({ children }) => {
     videos: state.videos,
     categories: state.categories,
     sortByCategory: state.sortByCategory,
+    liked: state.liked,
+    watchLater: state.watchLater,
+    history: state.history,
     dispatch
   }
   return (
